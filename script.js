@@ -41,14 +41,13 @@ var questionsArray = [
 ];
 
 timer();
-scoreDisplay(scoreCounter);
+manageScore(scoreCounter);
 wrap (li1, li2, li3, li4, scoreCounter);
 
-function scoreDisplay(score){//control/display score on screen
+function manageScore(score){//control/display score on screen
     document.getElementById("score").innerHTML = "Score: "+score;
+    localStorage.setItem("score", JSON.stringify(score));
 }
-
-storeScore(scoreCounter);
 function wrap (a1, a2, a3, a4, counter){// append questions to LI
     questionsDisplay.textContent = questionsArray[i].questionText;
     a1.textContent = questionsArray[i].answers[0];
@@ -91,8 +90,7 @@ function questionControl(param1, counter){//check if the question is correct
     if (questionsArray[i].answerId == param1){
         alert("correct");
         counter = counter + 10;
-        scoreDisplay(counter);
-        storeScore(counter);
+        manageScore(counter);
         i++;
         if (i > questionsArray.length){
             window.location.href="score.html";}
@@ -100,15 +98,10 @@ function questionControl(param1, counter){//check if the question is correct
     else{
         alert("Incorrect");
         counter = counter - 10;
-        scoreDisplay(counter);
-        storeScore(counter);
+        manageScore(counter);
         i++;
         clocker = clocker - 5;
         if (i > questionsArray.length){
             window.location.href="score.html";}
         wrap (li1, li2, li3, li4, counter);}
 }
-
-  function storeScore(score) { // save score in local storage
-    localStorage.setItem("score", JSON.stringify(score));
-  }
