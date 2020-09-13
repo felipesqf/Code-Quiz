@@ -1,12 +1,17 @@
 var body = document.body;
 var questionsDisplay = document.getElementById("question");
 var listEl = document.getElementById("listitens");
-var li1 = document.getElementById("opt0");
-var li2 = document.getElementById("opt1");
-var li3 = document.getElementById("opt2");
-var li4 = document.getElementById("opt3");
+var li1 = document.getElementById("0");
+var li2 = document.getElementById("1");
+var li3 = document.getElementById("2");
+var li4 = document.getElementById("3");
+var attr1 = li1.getAttribute("data-id");
+var attr2 = li2.getAttribute("data-id");
+var attr3 = li3.getAttribute("data-id");
+var attr4 = li4.getAttribute("data-id");
 var i = 0;
 var scoreCounter = 0;
+var clocker = 20;
 var questionsArray = [
     {
         questionText: "Commonly used data types DO NOT inlude:",
@@ -34,10 +39,12 @@ var questionsArray = [
         answerId: 3
     }
 ];
-wrap (li1, li2, li3, li4);
-
-function wrap (a1, a2, a3, a4){
-    console.log(scoreCounter)
+wrap (li1, li2, li3, li4, scoreCounter);
+timer();
+document.getElementById("score").innerHTML = scoreCounter;
+storeScore(scoreCounter);
+function wrap (a1, a2, a3, a4, counter){// append questions to LI
+    alert(counter);
     questionsDisplay.textContent = questionsArray[i].questionText;
     a1.textContent = questionsArray[i].answers[0];
     a2.textContent = questionsArray[i].answers[1];
@@ -51,56 +58,55 @@ function wrap (a1, a2, a3, a4){
     listEl.appendChild(a3);
     listEl.appendChild(a4);
 
+    a1.onclick = function() {
+        questionControl(attr1, counter);}
+    a2.onclick = function() {
+        questionControl(attr2, counter);}
+    a3.onclick = function() {
+        questionControl(attr3, counter); }
+    a4.onclick = function() {
+        questionControl(attr4, counter);}
 
-    li1.onclick = function() {
-        if (questionsArray[i].answerId === 0){
-            alert("correct");
-            scoreCounter + 10;
-            i++;
-            wrap (li1, li2, li3, li4);}
-        else{
-            scoreCounter - 10;
-            alert("incorrect");
-            i++;
-            wrap (li1, li2, li3, li4);}
-    }
-
-    li2.onclick = function() {
-        if (questionsArray[i].answerId === 1){
-            alert("correct");
-            scoreCounter + 10;
-            i++;
-            wrap (li1, li2, li3, li4);}
-        else{
-            scoreCounter - 10;
-            alert("incorrect");
-            i++;
-            wrap (li1, li2, li3, li4);}
-        }
-    }
-
-    li3.onclick = function() {
-        if (questionsArray[i].answerId === 2){
-            alert("correct");
-            scoreCounter + 10;
-            i++;
-            wrap (li1, li2, li3, li4);}
-        else{
-            scoreCounter - 10;
-            alert("incorrect");
-            i++;
-            wrap (li1, li2, li3, li4);}
-    }
-
-    li4.onclick = function() {
-        if (questionsArray[i].answerId === 3){
-            alert("correct");
-            scoreCounter + 10;
-            i++;
-            wrap (li1, li2, li3, li4);}
-        else{
-            scoreCounter - 10;
-            alert("incorrect");
-            i++;
-            wrap (li1, li2, li3, li4);}
 }
+if( i > questionsArray.length){
+    window.location.href="score.html";}
+
+function timer(){//control timer
+var downloadTimer = setInterval(function(){
+  if(clocker <= 0){
+    clearInterval(downloadTimer);
+    document.getElementById("countdown").innerHTML = "Finished";
+    window.location.href="score.html";
+  } else {
+    document.getElementById("countdown").innerHTML = clocker + " seconds remaining";
+  }
+  clocker -= 1;
+}, 1000);
+}
+
+function questionControl(param1, counter){//check if the question is correct
+    if (questionsArray[i].answerId == param1){
+        alert("correct");
+        counter = counter + 10;
+        document.getElementById("score").innerHTML = counter;
+        storeScore(counter);
+        debugger;
+        i++;
+        if( i > questionsArray.length){
+            window.location.href="score.html";}
+        wrap (li1, li2, li3, li4, counter);}
+    else{
+        alert("Incorrect");
+        counter = counter - 10;
+        document.getElementById("score").innerHTML = counter;
+        storeScore(counter);
+        i++;
+        clocker - 5000;
+        if( i > questionsArray.length){
+            window.location.href="score.html";}
+        wrap (li1, li2, li3, li4, counter);}
+}
+
+  function storeScore(score) { // save score in local storage
+    localStorage.setItem("score", JSON.stringify(score));
+  }

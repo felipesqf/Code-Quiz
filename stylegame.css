@@ -8,6 +8,23 @@ p{
   font-size: 1.5em;
   padding-bottom: 10px;
 }
+#countdown{
+  font-family: "Concert One", cursive;
+  float: right;
+  color: white;
+  font-size: 15px;
+  padding-bottom: 10px;
+  padding-bottom: 20px;
+}
+#score{
+  font-family: "Concert One", cursive;
+  float: left;
+  color: white;
+  font-size: 15px;
+  padding-bottom: 10px;
+  padding-bottom: 20px;
+}
+
 ol{
   margin-top: 35px;
  
