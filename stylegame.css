@@ -1,0 +1,30 @@
+body{
+  background-color: grey;
+}
+p{
+  font-family: "Concert One", cursive;
+  text-align: center;
+  color: white;
+  font-size: 1.5em;
+  padding-bottom: 10px;
+}
+ol{
+  margin-top: 35px;
+ 
+}
+li {
+  text-align: center;
+  font-family: "Concert One", cursive;
+  height: 50px;
+  width: 50%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color: #eb6d05;
+  color: white;
+  line-height: 1.5;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 20%;
+}

@@ -5,18 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="stylegame.css">
+    <title>Game</title>
 </head>
 <body>
     <div class="container">
         <div class="row">
-          <div class="col-sm-12">
-            <h1>Start a new game ?</h1>
-                <span><a href="game.html" id="play" class="btn">Play</a></span><br>
-                <span><a href="index.html" id="Scores" class="btn">Scores</a></span>
+          <div class="col-sm-6"></div>
+          <div class="col-sm-6">
+            <p id="question"></p><br>
+              <ol id="listitens">
+                <li id="opt0" class="options"></li>
+                <li id="opt1" class="options"></li>
+                <li id="opt2" class="options"></li>
+                <li id="opt3" class="options"></li>
+              </ol>
           </div>
         </div>
       </div>
+      <script src="script.js"></script>
 </body>
 </html>
