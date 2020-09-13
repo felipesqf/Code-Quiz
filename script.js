@@ -39,12 +39,17 @@ var questionsArray = [
         answerId: 3
     }
 ];
-wrap (li1, li2, li3, li4, scoreCounter);
+
 timer();
-document.getElementById("score").innerHTML = scoreCounter;
+scoreDisplay(scoreCounter);
+wrap (li1, li2, li3, li4, scoreCounter);
+
+function scoreDisplay(score){//control/display score on screen
+    document.getElementById("score").innerHTML = "Score: "+score;
+}
+
 storeScore(scoreCounter);
 function wrap (a1, a2, a3, a4, counter){// append questions to LI
-    alert(counter);
     questionsDisplay.textContent = questionsArray[i].questionText;
     a1.textContent = questionsArray[i].answers[0];
     a2.textContent = questionsArray[i].answers[1];
@@ -68,15 +73,13 @@ function wrap (a1, a2, a3, a4, counter){// append questions to LI
         questionControl(attr4, counter);}
 
 }
-if( i > questionsArray.length){
-    window.location.href="score.html";}
 
 function timer(){//control timer
 var downloadTimer = setInterval(function(){
   if(clocker <= 0){
     clearInterval(downloadTimer);
     document.getElementById("countdown").innerHTML = "Finished";
-    window.location.href="score.html";
+    window.location.href="score.html"; // show score page if time finish
   } else {
     document.getElementById("countdown").innerHTML = clocker + " seconds remaining";
   }
@@ -88,21 +91,21 @@ function questionControl(param1, counter){//check if the question is correct
     if (questionsArray[i].answerId == param1){
         alert("correct");
         counter = counter + 10;
-        document.getElementById("score").innerHTML = counter;
+        scoreDisplay(counter);
         storeScore(counter);
-        debugger;
         i++;
-        if( i > questionsArray.length){
+        if (i > questionsArray.length){
             window.location.href="score.html";}
         wrap (li1, li2, li3, li4, counter);}
     else{
         alert("Incorrect");
         counter = counter - 10;
-        document.getElementById("score").innerHTML = counter;
+        scoreDisplay(counter);
         storeScore(counter);
         i++;
-        clocker - 5000;
-        if( i > questionsArray.length){
+        clocker = clocker - 5;
+        debugger;
+        if (i > questionsArray.length){
             window.location.href="score.html";}
         wrap (li1, li2, li3, li4, counter);}
 }
