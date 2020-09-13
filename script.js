@@ -104,7 +104,6 @@ function questionControl(param1, counter){//check if the question is correct
         storeScore(counter);
         i++;
         clocker = clocker - 5;
-        debugger;
         if (i > questionsArray.length){
             window.location.href="score.html";}
         wrap (li1, li2, li3, li4, counter);}
