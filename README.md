@@ -36,7 +36,7 @@ THEN I can save my initials and score<br>
 N/A.
 ​
 ### Link to the Website
-<a href="https://felipesqf.github.io/Code-Quiz/ /">Link to the Password Generator application</a>
+<a href="https://felipesqf.github.io/Code-Quiz/">Link to the Password Generator application</a>
 
 ## Authors
 Felipe Ferreira  <br><br>
