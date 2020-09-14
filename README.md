@@ -1,42 +1,51 @@
-# 04 Web APIs: Code Quiz
-
-As you proceed in your career as a web developer, you will probably be asked to complete a coding assessment, which is typically a combination of multiple-choice questions and interactive challenges. Build a timed code quiz with multiple-choice questions. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
+# Title
+This application is a combination of multiple-choice questions and interactive challenges. Build a timed code quiz with multiple-choice questions. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
+​
+## Contents
+The project is composed of 1 page, index.html, style.css and script.js. It also has images in the img folder
 
 ## User Story
-
-```
 AS A coding bootcamp student
 I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
 SO THAT I can gauge my progress compared to my peers
-```
-
+​
 ## Acceptance Criteria
+GIVEN I am taking a code quiz<br>
+WHEN I click the start button<br>
+THEN a timer starts and I am presented with a question<br>
+WHEN I answer a question<br>
+THEN I am presented with another question<br>
+WHEN I answer a question incorrectly<br>
+THEN time is subtracted from the clock<br>
+WHEN all questions are answered or the timer reaches 0<br>
+THEN the game is over<br>
+WHEN the game is over<br>
+THEN I can save my initials and score<br>
 
-```
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and score
-```
 
-The following animation demonstrates the application functionality:
+## Built With
+* [VScode](https://code.visualstudio.com/) - The editor of choice
+* [Terminal](https://gitforwindows.org/) - Git terminal
+​
+#### Final Interface
+​![screenshot1](https://github.com/felipesqf/Code-Quiz/blob/master/images/index.PNG) 
+![screenshot1](https://github.com/felipesqf/Code-Quiz/blob/master/images/score.jpg) 
+​![screenshot1](https://github.com/felipesqf/Code-Quiz/blob/master/images/score.PNG) 
 
-![code quiz](./Assets/04-web-apis-homework-demo.gif)
+### Licence
+N/A.
+​
+### Link to the Website
+<a href="https://felipesqf.github.io/Password-Generator/">Link to the Password Generator application</a>
 
-### Review
+## Authors
+Felipe Ferreira  <br><br>
+Contact information:<br>
+felipesqf@gmail.com<br>
+Github: felipesqf<br>
++61 0406 021 252
+​​  
+## Acknowledgments
+To Teacher and TA's:
+Klaus Paiva, Sandes and Mozamel Anwary
 
-You are required to submit the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
