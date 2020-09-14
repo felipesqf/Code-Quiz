@@ -28,9 +28,9 @@ THEN I can save my initials and score<br>
 * [Terminal](https://gitforwindows.org/) - Git terminal
 ​
 #### Final Interface
-​![screenshot1](https://github.com/felipesqf/Code-Quiz/blob/master/images/index.PNG) 
-![screenshot1](https://github.com/felipesqf/Code-Quiz/blob/master/images/score.jpg) 
-​![screenshot1](https://github.com/felipesqf/Code-Quiz/blob/master/images/score.PNG) 
+​![screenshot1](https://github.com/felipesqf/Code-Quiz/blob/master/images/index.jpg) 
+![screenshot1](https://github.com/felipesqf/Code-Quiz/blob/master/images/game.jpg) 
+​![screenshot1](https://github.com/felipesqf/Code-Quiz/blob/master/images/score.jpg) 
 
 ### Licence
 N/A.
