@@ -49,3 +49,24 @@ li {
   position: relative;
   left: 20%;
 }
+
+a{
+  color: white;
+}
+.btn{
+  font-size: 20px;
+  text-align: center;
+  font-family: "Concert One", cursive;
+  height: 50px;
+  width: 150px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color: #eb6d05;
+  color: white;
+  line-height: 1.5;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 21%;
+} 

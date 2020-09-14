@@ -39,14 +39,15 @@ var questionsArray = [
         answerId: 3
     }
 ];
-
+var initials = prompt("Please enter your initials");
 timer();
 manageScore(scoreCounter);
 wrap (li1, li2, li3, li4, scoreCounter);
 
 function manageScore(score){//control/display score on screen
     document.getElementById("score").innerHTML = "Score: "+score;
-    localStorage.setItem("score", JSON.stringify(score));
+    localStorage.setItem(initials,"Points: ("+ JSON.stringify(score)+") - Initials: " + initials);
+
 }
 function wrap (a1, a2, a3, a4, counter){// append questions to LI
     questionsDisplay.textContent = questionsArray[i].questionText;
@@ -92,7 +93,7 @@ function questionControl(param1, counter){//check if the question is correct
         counter = counter + 10;
         manageScore(counter);
         i++;
-        if (i > questionsArray.length){
+        if (i > 4){
             window.location.href="score.html";}
         wrap (li1, li2, li3, li4, counter);}
     else{
@@ -101,7 +102,7 @@ function questionControl(param1, counter){//check if the question is correct
         manageScore(counter);
         i++;
         clocker = clocker - 5;
-        if (i > questionsArray.length){
+        if (i > 4){
             window.location.href="score.html";}
         wrap (li1, li2, li3, li4, counter);}
 }
