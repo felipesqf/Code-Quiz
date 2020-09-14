@@ -28,15 +28,15 @@ THEN I can save my initials and score<br>
 * [Terminal](https://gitforwindows.org/) - Git terminal
 ​
 #### Final Interface
-​![screenshot1](https://github.com/felipesqf/Code-Quiz/blob/master/images/index.jpg) 
-![screenshot1](https://github.com/felipesqf/Code-Quiz/blob/master/images/game.jpg) 
-​![screenshot1](https://github.com/felipesqf/Code-Quiz/blob/master/images/score.jpg) 
+​![screenshot1](https://github.com/felipesqf/Code-Quiz/blob/master/images/index.png) 
+![screenshot1](https://github.com/felipesqf/Code-Quiz/blob/master/images/game.png) 
+​![screenshot1](https://github.com/felipesqf/Code-Quiz/blob/master/images/score.png) 
 
 ### Licence
 N/A.
 ​
 ### Link to the Website
-<a href="https://felipesqf.github.io/Password-Generator/">Link to the Password Generator application</a>
+<a href="https://felipesqf.github.io/Code-Quiz/ /">Link to the Password Generator application</a>
 
 ## Authors
 Felipe Ferreira  <br><br>
