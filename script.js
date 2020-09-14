@@ -45,8 +45,8 @@ manageScore(scoreCounter);
 wrap (li1, li2, li3, li4, scoreCounter);
 
 function manageScore(score){//control/display score on screen
-    document.getElementById("score").innerHTML = "Score: "+score;
-    localStorage.setItem(initials,"Points: ("+ JSON.stringify(score)+") - Initials: " + initials);
+    document.getElementById("score").innerHTML = "Score: "+score;// display score on the screen
+    localStorage.setItem(initials,"Points: ("+ JSON.stringify(score)+") - Initials: " + initials); //save on the storage
 
 }
 function wrap (a1, a2, a3, a4, counter){// append questions to LI
@@ -79,7 +79,8 @@ var downloadTimer = setInterval(function(){
   if(clocker <= 0){
     clearInterval(downloadTimer);
     document.getElementById("countdown").innerHTML = "Finished";
-    window.location.href="score.html"; // show score page if time finish
+    window.location.href="score.html";
+    alert("Your score: "+ counter); // show score page if time finish
   } else {
     document.getElementById("countdown").innerHTML = clocker + " seconds remaining";
   }
@@ -90,19 +91,21 @@ var downloadTimer = setInterval(function(){
 function questionControl(param1, counter){//check if the question is correct
     if (questionsArray[i].answerId == param1){
         alert("correct");
-        counter = counter + 10;
+        counter = counter + 10; //increment counter
         manageScore(counter);
         i++;
         if (i > 4){
-            window.location.href="score.html";}
+            window.location.href="score.html";// redirect to score page 
+            alert("Your score: "+ counter)}
         wrap (li1, li2, li3, li4, counter);}
     else{
         alert("Incorrect");
-        counter = counter - 10;
+        counter = counter - 10; //deduct counter
         manageScore(counter);
         i++;
-        clocker = clocker - 5;
+        clocker = clocker - 5; //deduct time
         if (i > 4){
-            window.location.href="score.html";}
+            window.location.href="score.html";// redirect to score page 
+            alert("Your score: "+ counter)}
         wrap (li1, li2, li3, li4, counter);}
 }
