@@ -79,8 +79,7 @@ var downloadTimer = setInterval(function(){
   if(clocker <= 0){
     clearInterval(downloadTimer);
     document.getElementById("countdown").innerHTML = "Finished";
-    window.location.href="score.html";
-    alert("Your score: "+ counter); // show score page if time finish
+    finishQuiz(counter); // show score page if time finish
   } else {
     document.getElementById("countdown").innerHTML = clocker + " seconds remaining";
   }
@@ -95,8 +94,7 @@ function questionControl(param1, counter){//check if the question is correct
         manageScore(counter);
         i++;
         if (i > 4){
-            window.location.href="score.html";// redirect to score page 
-            alert("Your score: "+ counter)}
+            finishQuiz(counter)}
         wrap (li1, li2, li3, li4, counter);}
     else{
         alert("Incorrect");
@@ -105,7 +103,10 @@ function questionControl(param1, counter){//check if the question is correct
         i++;
         clocker = clocker - 5; //deduct time
         if (i > 4){
-            window.location.href="score.html";// redirect to score page 
-            alert("Your score: "+ counter)}
+            finishQuiz(counter)}
         wrap (li1, li2, li3, li4, counter);}
+}
+function finishQuiz(counter){
+    window.location.href="score.html";// redirect to score page 
+    alert("Your score: "+ counter);
 }
