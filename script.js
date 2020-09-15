@@ -47,7 +47,7 @@ wrap (li1, li2, li3, li4, scoreCounter);
 function manageScore(score){//control/display score on screen
     document.getElementById("score").innerHTML = "Score: "+score;// display score on the screen
     localStorage.setItem(initials,"Points: ("+ JSON.stringify(score)+") - Initials: " + initials); //save on the storage
-
+    scoreCounter = score;
 }
 function wrap (a1, a2, a3, a4, counter){// append questions to LI
     questionsDisplay.textContent = questionsArray[i].questionText;
@@ -79,7 +79,7 @@ var downloadTimer = setInterval(function(){
   if(clocker <= 0){
     clearInterval(downloadTimer);
     document.getElementById("countdown").innerHTML = "Finished";
-    finishQuiz(counter); // show score page if time finish
+    finishQuiz(scoreCounter); // show score page if time finish
   } else {
     document.getElementById("countdown").innerHTML = clocker + " seconds remaining";
   }
