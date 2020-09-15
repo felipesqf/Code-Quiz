@@ -14,7 +14,7 @@ var scoreCounter = 0;
 var clocker = 20;
 var questionsArray = [
     {
-        questionText: "Commonly used data types DO NOT inlude:",
+        questionText: "Commonly used data types DO NOT include:",
         answers: ["alerts", "booleans", "numbers", "strings"],
         answerId: 0
     },
@@ -82,7 +82,7 @@ var downloadTimer = setInterval(function(){
     finishQuiz(scoreCounter); // show score page if time finish
   } else {
     document.getElementById("countdown").innerHTML = clocker + " seconds remaining";
-  }
+}
   clocker -= 1;
 }, 1000);
 }
